@@ -21,7 +21,7 @@ async function getNews(keyword) {
     }
 
     catch (error) {
-        throw new Error("unable to fetch results from the API");
+        throw new Error(`unable to fetch results from the API. Reason- ${error.response.data?.code}`);
     }
 }
 
@@ -43,7 +43,7 @@ async function getNewsHeadlines(countryName = "in", page = 1, pageSize = 6) {
     }
 
     catch (error) {
-        throw new Error("unable to fetch results from the API");
+        throw new Error(`unable to fetch results from the API. Reason- ${error.response.data?.code}`);
     }
 }
 

@@ -20,7 +20,7 @@ app.get('/viralNews', async (req, res) => {
     }
 
     catch (error) {
-        res.status(500).json({ error: 'failed to fetch data' });
+        res.status(500).json({ error: error.message });
     }
 });
 
@@ -34,7 +34,7 @@ app.get('/viralHeadlines', async (req, res) => {
     }
 
     catch (error) {
-        res.status(500).json({ error: 'failed to fetch data' });
+        res.status(500).json({ error: error.message });
     }
 });
 
